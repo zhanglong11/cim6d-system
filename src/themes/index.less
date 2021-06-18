@@ -1,0 +1,53 @@
+@import url('../styles/common.less');
+.scrollbar;
+body{
+  background-color: #f0f2f5;
+}
+.app-main{
+  padding: 20px;
+  .app-main{
+    padding: 0;
+  }
+  & > div{
+    padding: 20px;
+    background: #fff;
+    &.no-padding{
+      background: none;
+      padding: 0;
+    }
+  }
+  // 表单配色
+  .el-table__header{
+    tr{
+      th{
+        background: #f8f8f9;
+      }
+    }
+  }
+}
+.sidebar-logo-container{
+  padding: 15px 0;
+  height: auto;
+}
+.hideSidebar .el-submenu>.el-submenu__title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-menu{
+  line-height: normal !important;
+.right-menu-con{
+    display: flex;
+    align-items: center;
+    .el-button{
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+.el-form-item__label{
+  font-weight: normal;
+}
+.is-padding{
+  padding-bottom: 50px;
+}

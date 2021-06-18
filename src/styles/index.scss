@@ -1,0 +1,182 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+
+  a {
+    color: #409eff;
+
+    &:hover {
+      color: darken(#409eff, 30%);
+    }
+  }
+}
+
+.scroll-beauty{
+  @include scrollBar
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+}
+.app-main > div {
+  >div.no-padding{
+    margin: -20px;
+    padding: 0 !important;
+    background: #F0F2F5 !important;
+  }
+}
+.tooltips {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.end {
+    justify-content: flex-end;
+  }
+
+  > form {
+    flex: 1;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    > .el-input {
+      margin-bottom: 17px;
+    }
+    .el-input + .el-button {
+      margin-left: 30px;
+    }
+    > span {
+      font-size: 14px;
+    }
+  }
+
+  .el-row + .el-row {
+    margin-top: 15px;
+  }
+
+  .el-form-item--mini.el-form-item,
+  .el-form-item--small.el-form-item,
+  .el-button {
+    margin-bottom: 17px;
+  }
+  .el-form-item .el-button {
+    margin-bottom: 0;
+  }
+}
+.el-table{
+  td{
+    .el-button + .el-button{
+      margin-left: 5px;
+    }
+  }
+}
+
+//调整vue-treeselect的样式和elementui 风格一致
+body {
+  .vue-treeselect--focused .vue-treeselect__control {
+    border-color: #409eff;
+  }
+
+  .vue-treeselect--open-below .vue-treeselect__menu {
+    margin-top: 5px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+
+  .vue-treeselect__control {
+    height: 32px;
+    font-size: 14px;
+    border-color: #dcdfe6;
+    border-radius: 4px !important;
+
+    .vue-treeselect__placeholder {
+      line-height: 30px;
+    }
+  }
+}
+.el-card__header{
+  padding: 9px 20px;
+}
+.footer-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 5px 0 7px 0 #bbb;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  button {
+    margin: 6px;
+    padding: 12px 20px;
+  }
+}
+
+.primary{
+  color:$primary-color;
+}
+
+.pointer{
+  cursor:pointer;
+}
